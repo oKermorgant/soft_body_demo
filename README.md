@@ -1,4 +1,4 @@
-# Demo of interaction betweem physics and visuals for Gazebo plugins
+# Demo of interaction between physics and visuals for Gazebo plugins
 
 A video of this demo can be found [here](https://box.ec-nantes.fr:443/index.php/s/dxATS28AgTfkw2i).
 
