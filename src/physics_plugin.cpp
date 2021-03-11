@@ -20,7 +20,14 @@ namespace gazebo
 void SpringModelPlugin::Load(physics::ModelPtr model, sdf::ElementPtr sdf)
 {
   std::cout << "Loading soft body physics" << std::endl;
+
   ee = model->GetLinks()[0];
+  auto base1 = model->GetWorld()->ModelByName("base1")->GetLinks()[0];
+  auto base2 = model->GetWorld()->ModelByName("base2")->GetLinks()[0];
+
+
+
+
 
   // model params are passed through plugin definition in SDF
   spring_model.initParams(ee->GetWorld()->Physics()->GetMaxStepSize(),  // dt from Gazebo engine

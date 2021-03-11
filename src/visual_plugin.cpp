@@ -35,7 +35,9 @@ void SpringVisualPlugin::Load(rendering::VisualPtr parent, sdf::ElementPtr sdf)
 {
   std::cout << "Loading soft body visual" << std::endl;
   radius = read(sdf, "radius", 0.1);
-  scale = read(sdf, "scale", 1.);
+  inv_scale.X(1./parent->Scale().X());
+  inv_scale.Y(1./parent->Scale().Y());
+  inv_scale.Z(1./parent->Scale().Z());
 
   visual = parent;
   lines = visual->CreateDynamicLine(rendering::RENDERING_LINE_STRIP);
@@ -56,7 +58,7 @@ void SpringVisualPlugin::Update()
   const static double step(1./points);
   for(int i = 0; i <= points; ++i)
   {
-    lines->SetPoint(i, scale*getPoint(msg, t));
+    lines->SetPoint(i, inv_scale*getPoint(msg, t)); // element-wise scale multiply
     t += step;
   }
   lines->Update();

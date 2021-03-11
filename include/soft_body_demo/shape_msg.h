@@ -30,7 +30,7 @@ struct ShapeMsg
           std::cout << coef << " ";
         std::cout << std::endl;
       }
-    }    
+    }
 };
 }
 

@@ -42,7 +42,6 @@
        <visual name="box">
             <plugin name="soft_body_visual_plugin" filename="libsoft_body_visual_plugin.so">
                 <radius>0.05</radius>
-                <scale>10</scale>
             </plugin>
         <geometry>
         <box><size>${x} ${y} ${z}</size></box>

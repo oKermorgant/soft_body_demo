@@ -57,4 +57,4 @@ The node `physics_node` is also built to process the physics. It communicates wi
 
 ## Additional notes
 
-* coordinates in the visual plugin are relative to the visual shape from the model. In particular, they are scaled to the box dimension (if it is a box). some tests should be done to check that the shape is displayed correctly.
+* coordinates in the visual plugin are relative to the visual shape from the model. The example show how to get the inverse scale and size the shape accordingly.

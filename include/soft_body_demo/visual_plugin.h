@@ -26,7 +26,7 @@ protected:
     event::ConnectionPtr update_event;
     rendering::DynamicLines* lines;
     int points = 500;
-    double scale = 1;
+    Vector3d inv_scale;
 };
 GZ_REGISTER_VISUAL_PLUGIN(SpringVisualPlugin)
 }
