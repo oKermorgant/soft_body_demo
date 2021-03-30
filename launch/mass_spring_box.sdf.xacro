@@ -2,13 +2,13 @@
 <sdf version="1.4" xmlns:xacro="http://www.ros.org/wiki/xacro">
 <model name="mass_spring">
 
-  <xacro:property name="PI" value="3.1415926535897931"/>
+<xacro:property name="PI" value="3.1415926535897931"/>
   
-  <!-- end-effector properties -->
-  <xacro:property name="mass" value="1"/>
-  <xacro:property name="x" value=".1"/>
-  <xacro:property name="y" value=".1"/>
-  <xacro:property name="z" value=".1"/>
+<!-- end-effector properties -->
+<xacro:property name="mass" value="1"/>
+<xacro:property name="x" value=".1"/>
+<xacro:property name="y" value=".1"/>
+<xacro:property name="z" value=".1"/>
   
 <!-- physics parameters -->
 <xacro:arg name="enable_physics_plugin" default="true"/>
@@ -19,7 +19,7 @@
 <xacro:arg name="length" default="1"/>
   
 <!-- Model plugin for physics -->
-  <xacro:if value="$(arg enable_physics_plugin)">
+<xacro:if value="$(arg enable_physics_plugin)">
     <plugin name="soft_body_physics_plugin" filename="libsoft_body_physics_plugin.so">
         <fxy>$(arg fxy)</fxy>
         <fz>$(arg fz)</fz>
@@ -28,7 +28,7 @@
         <length>$(arg length)</length>
         <attach_point>0 0 0</attach_point>
     </plugin>
-  </xacro:if>
+</xacro:if>
     
     <link name="base_link"/>
     

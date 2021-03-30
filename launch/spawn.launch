@@ -18,7 +18,7 @@
     <!-- spawn model inside Gazebo -->
     <node name="spawner" pkg="gazebo_ros" type="spawn_model" output="screen" args="-sdf -model mass_spring -param robot_description -x 0. -y 0 -z 1 -R 0 -P 0 -Y 0"/>
     
-    <node name="soft_body_physics" pkg="soft_body_demo" type="physics_node" output="screen" respawn = "true" unless="$(arg enable_physics_plugin)">
+    <node name="soft_body_physics" pkg="soft_body_demo" type="physics_node" output="screen" unless="$(arg enable_physics_plugin)">
         <param name="fxy" value="$(arg fxy)"/>
         <param name="fz" value="$(arg fz)"/>
         <param name="mz" value="$(arg mz)"/>
